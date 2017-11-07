@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="JsTemplates.js"></script>
+    <script src="JsDataBindings.js"></script>
+</head>
+<body>
+     <div class="container">
+         <header>
+             DOLLARDOLLARS : 50
+         </header>
+         <ul id="stock-list">
+
+         </ul>
+     </div>
+     <template id="stock-template">
+             <button class="buy-sell-button">Buy</button>
+             <input type="number" pattern="\d+([,.]\d+)?" class="amount-inputfield" placeholder="amount">
+             <button class="buy-sell-button">Sell</button>
+             <div class="stock-name"  data-bindings="name">hyggh</div>
+             <div class="stock-price" data-bindings="price -> innerText">100</div>
+             <div class="stock-owned" data-bindings="owned -> innerText">0</div>
+     </template>
+<script src="main.js"></script>
+</body>
+</html>
