@@ -11,7 +11,7 @@
 </head>
 <body>
      <div class="container">
-         <header>
+         <header data-bindings="money">
              DOLLARDOLLARS : 50
          </header>
          <ul id="stock-list">
@@ -19,12 +19,14 @@
          </ul>
      </div>
      <template id="stock-template">
-             <button class="buy-sell-button">Buy</button>
-             <input type="number" pattern="\d+([,.]\d+)?" class="amount-inputfield" placeholder="amount">
-             <button class="buy-sell-button">Sell</button>
-             <div class="stock-name"  data-bindings="name">hyggh</div>
-             <div class="stock-price" data-bindings="price -> innerText">100</div>
-             <div class="stock-owned" data-bindings="owned -> innerText">0</div>
+             <button class="buy-button">Buy</button>
+             <input type="number" pattern="\d+([,.]\d+)?" class="amount-inputfield" placeholder="amount" data-bindings="amount">
+             <button class="sell-button">Sell</button>
+             <div class="stock-name"  data-bindings="name"></div>
+             <div class="stock-price" data-bindings="price"></div>
+             <div class="stock-owned" data-bindings="owned"></div>
+         <br>
+         <br>
      </template>
 <script src="main.js"></script>
 </body>
