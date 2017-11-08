@@ -8,7 +8,14 @@ let stockList = document.getElementById('stock-list');
 
 let headerbinding = new JsDataBindings('header');
 headerbinding.setFormatter(null,'money',function (money) {
-    return 'DOLLARDOLLARS '+money.toFixed(8);
+    if(money >= 1000000000)
+        money = Math.floor(money/1000000) +'m';
+    else if(money >= 1000000)
+        money = Math.floor(money/1000) +'k';
+    else{
+        money = money.toFixed(8)
+    }
+    return 'DOLLARDOLLARS '+money;
 });
 
  function getRandomNumber(min,max) {
@@ -154,7 +161,10 @@ function newGame() {
     updateUI();
 }
 
+
+
 newGame();
+
 
 
 
