@@ -247,7 +247,7 @@ function resetShop(){
     ));
   shop.shopItems.push(new ShopItem(
       'Upgrade vol',
-      'more volatile stocks',
+      'More volatile stocks',
       1000,
       0.3,
       'trending_up',
@@ -255,6 +255,19 @@ function resetShop(){
         if(buy(obj.price)){
           game.stockVolitile++;
           obj.price = obj.price * obj.priceMod;
+        }
+      }
+  ));
+  shop.shopItems.push(new ShopItem(
+      'Downgrade vol',
+      'Less volatile stocks',
+      game.stockVolitile*100,
+      1,
+      'trending_down',
+      function (obj) {
+        if(buy(obj.price)){
+          game.stockVolitile--;
+          obj.price = game.stockVolitile*100;
         }
       }
   ));
