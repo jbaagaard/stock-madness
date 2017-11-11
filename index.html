@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
@@ -17,7 +18,26 @@
          <ul id="stock-list">
 
          </ul>
+         <div id="shop">
+             <div id="shop-header">SHOP</div>
+             <ul id="shop-list">
+
+             </ul>
+         </div>
      </div>
+
+     <template id="shop-item-template">
+         <button>
+             <i class="material-icons">{{icon}}</i>
+         </button>
+     </template>
+
+         <div id="shop-item-tooltip" class="hidden" data-bindings="class -> class">
+             <div data-bindings="name">name</div>
+             <div data-bindings="desc">description</div>
+             <div data-bindings="price">0</div>
+         </div>
+
      <template id="stock-template">
              <button class="buy-button">Buy</button>
              <input type="number" pattern="\d+([,.]\d+)?" class="amount-inputfield" placeholder="amount" data-bindings="amount">

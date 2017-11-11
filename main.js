@@ -1,11 +1,24 @@
 "use strict";
 
+let shop = {};
 let stocks = [];
 let game = {};
 let template = JsT.loadById("stock-template");
+let template2 = JsT.loadById('shop-item-template');
 let stockList = document.getElementById('stock-list');
+let shopList = document.getElementById('shop-list');
+let tooltipDb = new JsDataBindings(document.getElementById('shop-item-tooltip'));
+let tooltip = document.getElementById('shop-item-tooltip');
+
+let names = {
+    mainName : ['Fizz','Bit','Snake','Kaj','Danni','weed'],
+    ending : ['coin','ly','mønt']
+};
 
 
+for(var i = 0;i<10;i++){
+
+}
 let headerbinding = new JsDataBindings('header');
 headerbinding.setFormatter(null,'money',function (money) {
     if(money >= 1000000000)
@@ -24,15 +37,16 @@ headerbinding.setFormatter(null,'money',function (money) {
 
 
 function generateName() {
-    let _mainName = ['Fizz','Bit','Snake','Kaj','Danni','weed'];
-    let _ending = ['coin','ly','mønt'];
 
-    let _name = _mainName[Math.floor(getRandomNumber(0,_mainName.length))];
+
+    let _name = names.mainName[Math.floor(getRandomNumber(0,names.mainName.length))];
     if(Math.random()*100 > 50)
         return _name;
     else
-        return _name + _ending[Math.floor(getRandomNumber(0,_ending.length))]
+        return _name + names.ending[Math.floor(getRandomNumber(0,names.ending.length))]
 }
+
+
 
 function Stock(fluctuation) {
     let _fluctuation = fluctuation * getRandomNumber(0.8,1.2);
@@ -142,6 +156,10 @@ function gameUpdate() {
             stocks.push(new Stock(game.stockVolitile));
         }
     }
+    let stockCount = game.stocks - stocks.length;
+    for(;stockCount > 0;stockCount--){
+        stocks.push(new Stock(game.stockVolitile))
+    }
     updateUI();
  }
 function newGame() {
@@ -153,15 +171,108 @@ function newGame() {
 
 
 
-
+    resetShop();
     stocks = [];
     for(var i = 0;i<game.stocks;i++){
-        stocks.push(new Stock(10));
+        stocks.push(new Stock(game.stockVolitile));
     }
     updateUI();
 }
 
+function message(s) {
+  console.log(s);
+}
 
+function showItemTooltip(item,i) {
+     console.log(item);
+    tooltipDb.name = item.name;
+    tooltipDb.desc = item.desc;
+    tooltipDb.price = item.price;
+    tooltip.classList.remove('hidden');
+}
+
+function hideItemTooltip(i) {
+  tooltip.classList.add('hidden');
+}
+
+function ShopItem(name,description,price,pricemod,icon,func){
+  this.name = name;
+  this.desc = description;
+  this.price = price;
+  this.priceMod = pricemod;
+  this.level = 0;
+  this.priceHistory = [];
+  this.action = function() {
+    func(_this);
+  };
+  this.icon = icon;
+  let _this = this;
+
+  let i = document.createElement('li');
+  i.classList.add('shop-item');
+  i.innerHTML = template2.render({icon:this.icon});
+  shopList.append(i);
+
+  i.querySelector('button').onclick = this.action;
+
+  i.onmouseover = function() {
+    showItemTooltip(_this,i);
+  };
+
+  i.onmouseout = function() {
+    hideItemTooltip(i)
+
+  }
+
+}
+
+
+
+function resetShop(){
+     shop.shopItems = [];
+
+
+    shop.shopItems.push(new ShopItem(
+       'Upgrade stocklist',
+        'Adds more stock',
+        600,
+        5,
+        'playlist_add',
+        function (obj) {
+            if(buy(obj.price)){
+              game.stocks++;
+              obj.price = obj.price * obj.priceMod;
+            }
+        }
+    ));
+  shop.shopItems.push(new ShopItem(
+      'Upgrade vol',
+      'more volatile stocks',
+      1000,
+      0.3,
+      'trending_up',
+      function (obj) {
+        if(buy(obj.price)){
+          game.stockVolitile++;
+          obj.price = obj.price * obj.priceMod;
+        }
+      }
+  ));
+
+}
+
+function buy(price) {
+    console.log(game.money+' '+price);
+  if(game.money >= price){
+    game.money -= price;
+    updateUI();
+    return true;
+  }
+  else{
+    message("You can't afford this my dude");
+    return false;
+  }
+}
 
 newGame();
 
