@@ -33,13 +33,11 @@ function JsDataBindings(htmlElement)
                 }
             }
             else if (removedLength === 0 && addedLength !== 0){
-                console.log("only added");
                 for (let i = 0; i < addedLength; i++){
                     indexElement(_this, added[i]);
                 }
             }
             else {
-                console.log("added and removed");
             }
         }
     }

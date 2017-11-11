@@ -1,7 +1,9 @@
+let shopItemTemplate = JsT.loadById('shop-item-template');
+let shopTooltip = new JsDataBindings(document.getElementById('shop-item-tooltip'));
 
-
-function Shop(gameObj) {
-    let _this = this;
+function Shop(gameObj, shopListId) {
+    let _thisShop = this;
+    let _shopList = document.getElementById(shopListId);
     this.inventory = [];
 
     this.buyItem = function (item) {
@@ -11,7 +13,7 @@ function Shop(gameObj) {
             item.price *= item.priceMod;
             item.level++;
             if (item.level > item.maxLevel){
-                _this.inventory.splice(_this.inventory.indexOf(item), 1);
+                _thisShop.inventory.splice(_thisShop.inventory.indexOf(item), 1);
             }
             console.log(item);
             return true;
@@ -21,98 +23,73 @@ function Shop(gameObj) {
             return false;
         }
     };
+
+    this.reset = function () {
+        _thisShop.inventory = [];
+
+
+        _thisShop.addItem('Upgrade stocklist',
+            'Adds more stock',
+            600,
+            5,
+            20,
+            'playlist_add',
+            function () {
+                gameObj.stocks++;
+            });
+        _thisShop.addItem('Upgrade vol',
+            'More volatile stocks',
+            1000,
+            0.3,
+            20,
+            'trending_up',
+            function (obj) {
+                game.stockVolitile++;
+            });
+        _thisShop.addItem('Downgrade vol',
+            'Less volatile stocks',
+            game.stockVolitile*100,
+            1,
+            20,
+            'trending_down',
+            function (obj) {
+                game.stockVolitile--;
+            });
+    };
+
+    this.addItem = function (name,description,price,priceMod, maxLvl,icon,func) {
+        _thisShop.inventory.push(new Item(name,description,price,priceMod, maxLvl,icon,func))
+    };
+
+    function Item(name,description,price,priceMod, maxLvl,icon,func) {
+        this.name = name;
+        this.desc = description;
+        this.price = price;
+        this.priceMod = priceMod;
+        this.maxLevel = maxLvl;
+        this.level = 0;
+        this.action = func;
+        this.icon = icon;
+        let _thisItem = this;
+
+        let i = document.createElement('li');
+        i.classList.add('shop-item');
+        i.innerHTML = shopItemTemplate.render({icon: this.icon});
+        i.querySelector('button').onclick = function () { _thisShop.buyItem(_thisItem); };
+        i.onmouseover = function() { showItemTooltip(_thisItem); };
+        i.onmouseout = hideItemTooltip;
+        _shopList.appendChild(i);
+        console.log(this);
+    }
 }
 
-function resetShop(){
-  shop.shopItems = [];
-
-
-  shop.shopItems.push(new ShopItem(
-      'Upgrade stocklist',
-      'Adds more stock',
-      600,
-      5,
-      'playlist_add',
-      function (obj) {
-        if(buy(obj.price)){
-          game.stocks++;
-          obj.price = obj.price * obj.priceMod;
-        }
-      }
-  ));
-  shop.shopItems.push(new ShopItem(
-      'Upgrade vol',
-      'More volatile stocks',
-      1000,
-      0.3,
-      'trending_up',
-      function (obj) {
-        if(buy(obj.price)){
-          game.stockVolitile++;
-          obj.price = obj.price * obj.priceMod;
-        }
-      }
-  ));
-  shop.shopItems.push(new ShopItem(
-      'Downgrade vol',
-      'Less volatile stocks',
-      game.stockVolitile*100,
-      1,
-      'trending_down',
-      function (obj) {
-        if(buy(obj.price)){
-          game.stockVolitile--;
-          obj.price = game.stockVolitile*100;
-        }
-      }
-  ));
-
+function showItemTooltip(item) {
+    shopTooltip.name = item.name;
+    shopTooltip.desc = item.desc;
+    shopTooltip.price = item.price;
+    shopTooltip.style = "opacity: 1";
 }
 
-function ShopItem(name,description,price,pricemod,icon,func){
-  this.name = name;
-  this.desc = description;
-  this.price = price;
-  this.priceMod = pricemod;
-  this.level = 0;
-  this.priceHistory = [];
-  this.action = function() {
-    func(_this);
-  };
-  this.icon = icon;
-  let _this = this;
-
-  let i = document.createElement('li');
-  i.classList.add('shop-item');
-  i.innerHTML = template2.render({icon:this.icon});
-  shopList.append(i);
-
-  i.querySelector('button').onclick = this.action;
-
-  i.onmouseover = function() {
-    showItemTooltip(_this,i);
-  };
-
-  i.onmouseout = function() {
-    hideItemTooltip(i)
-
-  }
-
-}
-
-
-
-
-
-function buy(price) {
-  console.log(game.money+' '+price);
-  if(game.money >= price){
-    game.money -= price;
-    updateUI();
-    return true;
-  }
-  else{
-    message("You can't afford this my dude");
-    return false;
-  }
+function hideItemTooltip() {
+    shopTooltip.style = "opacity: 0";
 }

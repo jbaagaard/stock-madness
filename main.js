@@ -1,15 +1,15 @@
 "use strict";
 
-let shop = {};
+// let shop = {};
 let stocks = [];
 let game = {};
-let template = JsT.loadById("stock-template");
-let template2 = JsT.loadById('shop-item-template');
+let stockTemplate = JsT.loadById("stock-template");
 let stockList = document.getElementById('stock-list');
-let shopList = document.getElementById('shop-list');
-let tooltipDb = new JsDataBindings(document.getElementById('shop-item-tooltip'));
-let tooltip = document.getElementById('shop-item-tooltip');
-
+// let template2 = JsT.loadById('shop-item-template');
+// let shopList = document.getElementById('shop-list');
+// let tooltipDb = new JsDataBindings(document.getElementById('shop-item-tooltip'));
+// let tooltip = document.getElementById('shop-item-tooltip');
+let shop = new Shop(game, 'shop-list');
 let names = {
     mainName : ['Fizz','Bit','Snake','Kaj','Danni','weed'],
     ending : ['coin','ly','mønt']
@@ -37,8 +37,6 @@ headerbinding.setFormatter(null,'money',function (money) {
 
 
 function generateName() {
-
-
     let _name = names.mainName[Math.floor(getRandomNumber(0,names.mainName.length))];
     if(Math.random()*100 > 50)
         return _name;
@@ -60,13 +58,13 @@ function Stock(fluctuation) {
 
     let i = document.createElement('li');
     i.classList.add('stock');
-    i.innerHTML = template.render();
+    i.innerHTML = stockTemplate.render();
 
     let db = new JsDataBindings(i);
     stockList.append(i);
 
-
-    console.log(db);
+    //
+    // console.log(db);
 
     i.querySelector('.buy-button').onclick = function (){
         //console.log(stocks[]);
@@ -146,8 +144,6 @@ function updateUI() {
 }
 
 
-
-
 function gameUpdate() {
     for (var i = 0; i < stocks.length; i++) {
         stocks[i].iterate();
@@ -163,15 +159,11 @@ function gameUpdate() {
     updateUI();
  }
 function newGame() {
-
-
      game.stocks = 5;
      game.stockVolitile = 10;
      game.money = 500;
 
-
-
-    resetShop();
+    shop.reset();
     stocks = [];
     for(var i = 0;i<game.stocks;i++){
         stocks.push(new Stock(game.stockVolitile));
@@ -183,23 +175,6 @@ function message(s) {
   console.log(s);
 }
 
-function showItemTooltip(item,i) {
-     console.log(item);
-    tooltipDb.name = item.name;
-    tooltipDb.desc = item.desc;
-    tooltipDb.price = item.price;
-    tooltip.classList.remove('hidden');
-}
-
-function hideItemTooltip(i) {
-  tooltip.classList.add('hidden');
-}
-
-
-
 newGame();
-
-
-
 
 setInterval(gameUpdate,1000);
