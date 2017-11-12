@@ -9,6 +9,8 @@ let stockList = document.getElementById('stock-list');
 let shopList = document.getElementById('shop-list');
 let tooltipDb = new JsDataBindings(document.getElementById('shop-item-tooltip'));
 let tooltip = document.getElementById('shop-item-tooltip');
+let messageDb = new JsDataBindings(document.getElementById('message'));
+let messageDiv = document.getElementById('message');
 
 let names = {
     mainName : ['Fizz','Bit','Snake','Kaj','Danni','weed'],
@@ -31,10 +33,9 @@ headerbinding.setFormatter(null,'money',function (money) {
     return 'DOLLARDOLLARS '+money;
 });
 
- function getRandomNumber(min,max) {
+function getRandomNumber(min,max) {
      return max - Math.random()*(max-min)
  }
-
 
 function generateName() {
 
@@ -45,8 +46,6 @@ function generateName() {
     else
         return _name + names.ending[Math.floor(getRandomNumber(0,names.ending.length))]
 }
-
-
 
 function Stock(fluctuation) {
     let _fluctuation = fluctuation * getRandomNumber(0.8,1.2);
@@ -145,9 +144,6 @@ function updateUI() {
     headerbinding.money = game.money;
 }
 
-
-
-
 function gameUpdate() {
     for (var i = 0; i < stocks.length; i++) {
         stocks[i].iterate();
@@ -162,6 +158,7 @@ function gameUpdate() {
     }
     updateUI();
  }
+
 function newGame() {
 
 
@@ -180,11 +177,12 @@ function newGame() {
 }
 
 function message(s) {
-  console.log(s);
-}
+    messageDb.message = s;
+    messageDiv.classList.remove('hidden');
+    messageDiv.classList.add('hidden');
+     }
 
 function showItemTooltip(item,i) {
-     console.log(item);
     tooltipDb.name = item.name;
     tooltipDb.desc = item.desc;
     tooltipDb.price = item.price;
@@ -195,11 +193,6 @@ function hideItemTooltip(i) {
   tooltip.classList.add('hidden');
 }
 
-
-
 newGame();
-
-
-
 
 setInterval(gameUpdate,1000);
