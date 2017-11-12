@@ -1,17 +1,24 @@
 "use strict";
 
-let shop = {};
+// let shop = {};
 let stocks = [];
 let game = {};
-let template = JsT.loadById("stock-template");
-let template2 = JsT.loadById('shop-item-template');
+let stockTemplate = JsT.loadById("stock-template");
 let stockList = document.getElementById('stock-list');
+<<<<<<< HEAD
 let shopList = document.getElementById('shop-list');
 let tooltipDb = new JsDataBindings(document.getElementById('shop-item-tooltip'));
 let tooltip = document.getElementById('shop-item-tooltip');
 let messageDb = new JsDataBindings(document.getElementById('message'));
 let messageDiv = document.getElementById('message');
 
+=======
+// let template2 = JsT.loadById('shop-item-template');
+// let shopList = document.getElementById('shop-list');
+// let tooltipDb = new JsDataBindings(document.getElementById('shop-item-tooltip'));
+// let tooltip = document.getElementById('shop-item-tooltip');
+let shop = new Shop(game, 'shop-list');
+>>>>>>> b838318f7704d6bd446e32a634ad7b0b8ab813e3
 let names = {
     mainName : ['Fizz','Bit','Snake','Kaj','Danni','weed'],
     ending : ['coin','ly','mønt']
@@ -38,8 +45,6 @@ function getRandomNumber(min,max) {
  }
 
 function generateName() {
-
-
     let _name = names.mainName[Math.floor(getRandomNumber(0,names.mainName.length))];
     if(Math.random()*100 > 50)
         return _name;
@@ -59,13 +64,13 @@ function Stock(fluctuation) {
 
     let i = document.createElement('li');
     i.classList.add('stock');
-    i.innerHTML = template.render();
+    i.innerHTML = stockTemplate.render();
 
     let db = new JsDataBindings(i);
     stockList.append(i);
 
-
-    console.log(db);
+    //
+    // console.log(db);
 
     i.querySelector('.buy-button').onclick = function (){
         //console.log(stocks[]);
@@ -144,6 +149,10 @@ function updateUI() {
     headerbinding.money = game.money;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> b838318f7704d6bd446e32a634ad7b0b8ab813e3
 function gameUpdate() {
     for (var i = 0; i < stocks.length; i++) {
         stocks[i].iterate();
@@ -160,15 +169,11 @@ function gameUpdate() {
  }
 
 function newGame() {
-
-
      game.stocks = 5;
      game.stockVolitile = 10;
      game.money = 500;
 
-
-
-    resetShop();
+    shop.reset();
     stocks = [];
     for(var i = 0;i<game.stocks;i++){
         stocks.push(new Stock(game.stockVolitile));
@@ -182,6 +187,7 @@ function message(s) {
     messageDiv.classList.add('hidden');
      }
 
+<<<<<<< HEAD
 function showItemTooltip(item,i) {
     tooltipDb.name = item.name;
     tooltipDb.desc = item.desc;
@@ -193,6 +199,8 @@ function hideItemTooltip(i) {
   tooltip.classList.add('hidden');
 }
 
+=======
+>>>>>>> b838318f7704d6bd446e32a634ad7b0b8ab813e3
 newGame();
 
 setInterval(gameUpdate,1000);
