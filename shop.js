@@ -40,7 +40,7 @@ function Shop(gameObj, shopListId) {
         _thisShop.addItem('Upgrade vol',
             'More volatile stocks',
             1000,
-            0.3,
+            1.3,
             20,
             'trending_up',
             function (obj) {
@@ -93,3 +93,6 @@ function showItemTooltip(item) {
 function hideItemTooltip() {
     shopTooltip.style = "opacity: 0";
 }
+
+
+

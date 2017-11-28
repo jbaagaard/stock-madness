@@ -2,25 +2,38 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="JsTemplates.js"></script>
     <script src="JsDataBindings.js"></script>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-        <div id="message" data-bindings="message" class="hidden"></div>
      <div class="container">
          <header data-bindings="money">
              DOLLARDOLLARS : 50
          </header>
+         <div id="message" data-bindings="message" class="hidden"></div>
+         <div id="stock-chart"></div>
+         STOCKS
          <ul id="stock-list">
 
          </ul>
          <div id="shop">
              <div id="shop-header">SHOP</div>
+             <div id="shop-item-tooltip" class="hidden" data-bindings="style -> style">
+                 <div data-bindings="name">name</div>
+                 <div data-bindings="desc">description</div>
+                 <div data-bindings="price"></div>
+             </div>
              <ul id="shop-list">
 
              </ul>
@@ -31,20 +44,20 @@
          <button>
              <i class="material-icons">{{icon}}</i>
          </button>
+
      </template>
 
-         <div id="shop-item-tooltip" class="hidden" data-bindings="style -> style">
-             <div data-bindings="name">name</div>
-             <div data-bindings="desc">description</div>
-             <div data-bindings="price">0</div>
-         </div>
+
 
      <template id="stock-template">
              <button class="buy-button">Buy</button>
              <input type="number" pattern="\d+([,.]\d+)?" class="amount-inputfield" placeholder="amount" data-bindings="amount">
-             <button class="sell-button">Sell</button>
+         <button class="sell-button">Sell</button>
              <div class="stock-name"  data-bindings="name"></div>
              <div class="stock-price" data-bindings="price"></div>
+
+             <div class="arrow-up"></div>
+             <div class="arrow-down"></div>
              <div class="stock-owned" data-bindings="owned"></div>
          <br>
          <br>

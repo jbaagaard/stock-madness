@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="813293e3-675c-487f-a50d-ab10e4759ccf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sm.iml" afterPath="$PROJECT_DIR$/.idea/sm.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shop.js" afterPath="$PROJECT_DIR$/shop.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,14 +21,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="697">
-              <caret line="50" column="16" lean-forward="true" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
-              <folding>
-                <element signature="n#template#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
+              <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -35,40 +34,31 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+            <state relative-caret-position="221">
+              <caret line="97" column="1" lean-forward="true" selection-start-line="97" selection-start-column="1" selection-end-line="97" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="181" column="36" lean-forward="false" selection-start-line="181" selection-start-column="36" selection-end-line="181" selection-end-column="36" />
+            <state relative-caret-position="1292">
+              <caret line="109" column="24" lean-forward="true" selection-start-line="109" selection-start-column="24" selection-end-line="109" selection-end-column="24" />
               <folding>
-                <element signature="e#549#646#0" expanded="false" />
-                <element signature="e#673#677#0" expanded="false" />
-                <element signature="e#785#1023#0" expanded="false" />
+                <element signature="e#907#961#0" expanded="false" />
+                <element signature="e#1219#1302#0" expanded="false" />
+                <element signature="e#1413#1641#0" expanded="false" />
                 <element signature="n#!!block;n#getRandomNumber#0" expanded="false" />
                 <element signature="n#!!block;n#generateName#0" expanded="false" />
-                <element signature="n#!!block;n#Stock#0" expanded="false" />
+                <element signature="e#5213#5269#0" expanded="false" />
+                <element signature="e#5289#5372#0" expanded="false" />
+                <element signature="n#!!block;n#randomEvent#0" expanded="false" />
                 <element signature="n#!!block;n#updateUI#0" expanded="false" />
                 <element signature="n#!!block;n#gameUpdate#0" expanded="false" />
                 <element signature="n#!!block;n#newGame#0" expanded="false" />
-                <element signature="e#4779#4838#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="shop.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shop.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1989">
-              <caret line="117" column="1" lean-forward="false" selection-start-line="117" selection-start-column="1" selection-end-line="117" selection-end-column="1" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -82,6 +72,14 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>var</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>let</replace>
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -90,8 +88,8 @@
       <list>
         <option value="$PROJECT_DIR$/JsDataBindings.js" />
         <option value="$PROJECT_DIR$/shop.js" />
-        <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/style.css" />
       </list>
     </option>
@@ -110,10 +108,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1066" />
+    <option name="x" value="-7" />
+    <option name="width" value="1932" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -132,6 +129,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -143,7 +141,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -260,18 +257,24 @@
       <workItem from="1510333066946" duration="3123000" />
       <workItem from="1510432326284" duration="364000" />
       <workItem from="1510432696465" duration="7915000" />
-      <workItem from="1510513045975" duration="91000" />
+      <workItem from="1510513045975" duration="868000" />
+      <workItem from="1510783946910" duration="5307000" />
+      <workItem from="1510844502945" duration="4955000" />
+      <workItem from="1510863443200" duration="2294000" />
+      <workItem from="1511210096143" duration="6335000" />
+      <workItem from="1511273526204" duration="1265000" />
+      <workItem from="1511367243148" duration="10407000" />
+      <workItem from="1511804176149" duration="2083000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45464000" />
+    <option name="totallyTimeSpent" value="78887000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="0" />
-    <editor active="true" />
+    <frame x="-7" y="0" width="1932" height="1057" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.086979166" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08663883" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -298,18 +301,68 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2805">
+          <caret line="165" column="2" lean-forward="true" selection-start-line="165" selection-start-column="2" selection-end-line="165" selection-end-column="2" />
           <folding>
-            <element signature="n#template#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#907#961#0" expanded="false" />
+            <element signature="e#1219#1302#0" expanded="false" />
+            <element signature="e#1413#1641#0" expanded="false" />
+            <element signature="n#!!block;n#getRandomNumber#0" expanded="false" />
+            <element signature="n#!!block;n#generateName#0" expanded="false" />
+            <element signature="e#5213#5269#0" expanded="false" />
+            <element signature="e#5289#5372#0" expanded="false" />
+            <element signature="n#!!block;n#randomEvent#0" expanded="false" />
+            <element signature="n#!!block;n#updateUI#0" expanded="false" />
+            <element signature="n#!!block;n#gameUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#newGame#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="94" column="1" lean-forward="false" selection-start-line="94" selection-start-column="1" selection-end-line="94" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -326,16 +379,17 @@
         <state relative-caret-position="3077">
           <caret line="181" column="36" lean-forward="false" selection-start-line="181" selection-start-column="36" selection-end-line="181" selection-end-column="36" />
           <folding>
-            <element signature="e#549#646#0" expanded="false" />
-            <element signature="e#673#677#0" expanded="false" />
-            <element signature="e#785#1023#0" expanded="false" />
+            <element signature="e#907#961#0" expanded="false" />
+            <element signature="e#1219#1302#0" expanded="false" />
+            <element signature="e#1413#1641#0" expanded="false" />
             <element signature="n#!!block;n#getRandomNumber#0" expanded="false" />
             <element signature="n#!!block;n#generateName#0" expanded="false" />
-            <element signature="n#!!block;n#Stock#0" expanded="false" />
+            <element signature="e#5213#5269#0" expanded="false" />
+            <element signature="e#5289#5372#0" expanded="false" />
+            <element signature="n#!!block;n#randomEvent#0" expanded="false" />
             <element signature="n#!!block;n#updateUI#0" expanded="false" />
             <element signature="n#!!block;n#gameUpdate#0" expanded="false" />
             <element signature="n#!!block;n#newGame#0" expanded="false" />
-            <element signature="e#4779#4838#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -352,9 +406,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-          <folding>
-            <element signature="n#template#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -378,16 +430,17 @@
         <state relative-caret-position="3417">
           <caret line="201" column="0" lean-forward="true" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
           <folding>
-            <element signature="e#549#646#0" expanded="false" />
-            <element signature="e#673#677#0" expanded="false" />
-            <element signature="e#785#1023#0" expanded="false" />
+            <element signature="e#907#961#0" expanded="false" />
+            <element signature="e#1219#1302#0" expanded="false" />
+            <element signature="e#1413#1641#0" expanded="false" />
             <element signature="n#!!block;n#getRandomNumber#0" expanded="false" />
             <element signature="n#!!block;n#generateName#0" expanded="false" />
-            <element signature="n#!!block;n#Stock#0" expanded="false" />
+            <element signature="e#5213#5269#0" expanded="false" />
+            <element signature="e#5289#5372#0" expanded="false" />
+            <element signature="n#!!block;n#randomEvent#0" expanded="false" />
             <element signature="n#!!block;n#updateUI#0" expanded="false" />
             <element signature="n#!!block;n#gameUpdate#0" expanded="false" />
             <element signature="n#!!block;n#newGame#0" expanded="false" />
-            <element signature="e#4779#4838#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -396,9 +449,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-          <folding>
-            <element signature="n#template#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -422,16 +473,17 @@
         <state relative-caret-position="2771">
           <caret line="163" column="0" lean-forward="true" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
           <folding>
-            <element signature="e#549#646#0" expanded="false" />
-            <element signature="e#673#677#0" expanded="false" />
-            <element signature="e#785#1023#0" expanded="false" />
+            <element signature="e#907#961#0" expanded="false" />
+            <element signature="e#1219#1302#0" expanded="false" />
+            <element signature="e#1413#1641#0" expanded="false" />
             <element signature="n#!!block;n#getRandomNumber#0" expanded="false" />
             <element signature="n#!!block;n#generateName#0" expanded="false" />
-            <element signature="n#!!block;n#Stock#0" expanded="false" />
+            <element signature="e#5213#5269#0" expanded="false" />
+            <element signature="e#5289#5372#0" expanded="false" />
+            <element signature="n#!!block;n#randomEvent#0" expanded="false" />
             <element signature="n#!!block;n#updateUI#0" expanded="false" />
             <element signature="n#!!block;n#gameUpdate#0" expanded="false" />
             <element signature="n#!!block;n#newGame#0" expanded="false" />
-            <element signature="e#4779#4838#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -440,9 +492,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
           <caret line="46" column="7" lean-forward="false" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
-          <folding>
-            <element signature="n#template#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -466,16 +516,17 @@
         <state relative-caret-position="3536">
           <caret line="208" column="13" lean-forward="false" selection-start-line="208" selection-start-column="13" selection-end-line="208" selection-end-column="13" />
           <folding>
-            <element signature="e#549#646#0" expanded="false" />
-            <element signature="e#673#677#0" expanded="false" />
-            <element signature="e#785#1023#0" expanded="false" />
+            <element signature="e#907#961#0" expanded="false" />
+            <element signature="e#1219#1302#0" expanded="false" />
+            <element signature="e#1413#1641#0" expanded="false" />
             <element signature="n#!!block;n#getRandomNumber#0" expanded="false" />
             <element signature="n#!!block;n#generateName#0" expanded="false" />
-            <element signature="n#!!block;n#Stock#0" expanded="false" />
+            <element signature="e#5213#5269#0" expanded="false" />
+            <element signature="e#5289#5372#0" expanded="false" />
+            <element signature="n#!!block;n#randomEvent#0" expanded="false" />
             <element signature="n#!!block;n#updateUI#0" expanded="false" />
             <element signature="n#!!block;n#gameUpdate#0" expanded="false" />
             <element signature="n#!!block;n#newGame#0" expanded="false" />
-            <element signature="e#4779#4838#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -484,9 +535,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="32" column="7" lean-forward="false" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
-          <folding>
-            <element signature="n#template#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -510,16 +559,17 @@
         <state relative-caret-position="3009">
           <caret line="177" column="13" lean-forward="false" selection-start-line="177" selection-start-column="13" selection-end-line="177" selection-end-column="13" />
           <folding>
-            <element signature="e#549#646#0" expanded="false" />
-            <element signature="e#673#677#0" expanded="false" />
-            <element signature="e#785#1023#0" expanded="false" />
+            <element signature="e#907#961#0" expanded="false" />
+            <element signature="e#1219#1302#0" expanded="false" />
+            <element signature="e#1413#1641#0" expanded="false" />
             <element signature="n#!!block;n#getRandomNumber#0" expanded="false" />
             <element signature="n#!!block;n#generateName#0" expanded="false" />
-            <element signature="n#!!block;n#Stock#0" expanded="false" />
+            <element signature="e#5213#5269#0" expanded="false" />
+            <element signature="e#5289#5372#0" expanded="false" />
+            <element signature="n#!!block;n#randomEvent#0" expanded="false" />
             <element signature="n#!!block;n#updateUI#0" expanded="false" />
             <element signature="n#!!block;n#gameUpdate#0" expanded="false" />
             <element signature="n#!!block;n#newGame#0" expanded="false" />
-            <element signature="e#4779#4838#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -528,9 +578,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
           <caret line="46" column="7" lean-forward="true" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
-          <folding>
-            <element signature="n#template#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -554,16 +602,17 @@
         <state relative-caret-position="2754">
           <caret line="162" column="0" lean-forward="true" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
           <folding>
-            <element signature="e#549#646#0" expanded="false" />
-            <element signature="e#673#677#0" expanded="false" />
-            <element signature="e#785#1023#0" expanded="false" />
+            <element signature="e#907#961#0" expanded="false" />
+            <element signature="e#1219#1302#0" expanded="false" />
+            <element signature="e#1413#1641#0" expanded="false" />
             <element signature="n#!!block;n#getRandomNumber#0" expanded="false" />
             <element signature="n#!!block;n#generateName#0" expanded="false" />
-            <element signature="n#!!block;n#Stock#0" expanded="false" />
+            <element signature="e#5213#5269#0" expanded="false" />
+            <element signature="e#5289#5372#0" expanded="false" />
+            <element signature="n#!!block;n#randomEvent#0" expanded="false" />
             <element signature="n#!!block;n#updateUI#0" expanded="false" />
             <element signature="n#!!block;n#gameUpdate#0" expanded="false" />
             <element signature="n#!!block;n#newGame#0" expanded="false" />
-            <element signature="e#4779#4838#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -572,9 +621,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#template#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -591,16 +638,17 @@
         <state relative-caret-position="1003">
           <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
           <folding>
-            <element signature="e#549#646#0" expanded="false" />
-            <element signature="e#673#677#0" expanded="false" />
-            <element signature="e#785#1023#0" expanded="false" />
+            <element signature="e#907#961#0" expanded="false" />
+            <element signature="e#1219#1302#0" expanded="false" />
+            <element signature="e#1413#1641#0" expanded="false" />
             <element signature="n#!!block;n#getRandomNumber#0" expanded="false" />
             <element signature="n#!!block;n#generateName#0" expanded="false" />
-            <element signature="n#!!block;n#Stock#0" expanded="false" />
+            <element signature="e#5213#5269#0" expanded="false" />
+            <element signature="e#5289#5372#0" expanded="false" />
+            <element signature="n#!!block;n#randomEvent#0" expanded="false" />
             <element signature="n#!!block;n#updateUI#0" expanded="false" />
             <element signature="n#!!block;n#gameUpdate#0" expanded="false" />
             <element signature="n#!!block;n#newGame#0" expanded="false" />
-            <element signature="e#4779#4838#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -616,9 +664,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding>
-            <element signature="n#template#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -642,16 +688,17 @@
         <state relative-caret-position="204">
           <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
-            <element signature="e#549#646#0" expanded="false" />
-            <element signature="e#673#677#0" expanded="false" />
-            <element signature="e#785#1023#0" expanded="false" />
+            <element signature="e#907#961#0" expanded="false" />
+            <element signature="e#1219#1302#0" expanded="false" />
+            <element signature="e#1413#1641#0" expanded="false" />
             <element signature="n#!!block;n#getRandomNumber#0" expanded="false" />
             <element signature="n#!!block;n#generateName#0" expanded="false" />
-            <element signature="n#!!block;n#Stock#0" expanded="false" />
+            <element signature="e#5213#5269#0" expanded="false" />
+            <element signature="e#5289#5372#0" expanded="false" />
+            <element signature="n#!!block;n#randomEvent#0" expanded="false" />
             <element signature="n#!!block;n#updateUI#0" expanded="false" />
             <element signature="n#!!block;n#gameUpdate#0" expanded="false" />
             <element signature="n#!!block;n#newGame#0" expanded="false" />
-            <element signature="e#4779#4838#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -660,9 +707,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="27" lean-forward="false" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-          <folding>
-            <element signature="n#template#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -679,16 +724,17 @@
         <state relative-caret-position="170">
           <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
-            <element signature="e#549#646#0" expanded="false" />
-            <element signature="e#673#677#0" expanded="false" />
-            <element signature="e#785#1023#0" expanded="false" />
+            <element signature="e#907#961#0" expanded="false" />
+            <element signature="e#1219#1302#0" expanded="false" />
+            <element signature="e#1413#1641#0" expanded="false" />
             <element signature="n#!!block;n#getRandomNumber#0" expanded="false" />
             <element signature="n#!!block;n#generateName#0" expanded="false" />
-            <element signature="n#!!block;n#Stock#0" expanded="false" />
+            <element signature="e#5213#5269#0" expanded="false" />
+            <element signature="e#5289#5372#0" expanded="false" />
+            <element signature="n#!!block;n#randomEvent#0" expanded="false" />
             <element signature="n#!!block;n#updateUI#0" expanded="false" />
             <element signature="n#!!block;n#gameUpdate#0" expanded="false" />
             <element signature="n#!!block;n#newGame#0" expanded="false" />
-            <element signature="e#4779#4838#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -697,9 +743,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding>
-            <element signature="n#template#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -730,16 +774,17 @@
         <state relative-caret-position="442">
           <caret line="26" column="24" lean-forward="true" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
           <folding>
-            <element signature="e#549#646#0" expanded="false" />
-            <element signature="e#673#677#0" expanded="false" />
-            <element signature="e#785#1023#0" expanded="false" />
+            <element signature="e#907#961#0" expanded="false" />
+            <element signature="e#1219#1302#0" expanded="false" />
+            <element signature="e#1413#1641#0" expanded="false" />
             <element signature="n#!!block;n#getRandomNumber#0" expanded="false" />
             <element signature="n#!!block;n#generateName#0" expanded="false" />
-            <element signature="n#!!block;n#Stock#0" expanded="false" />
+            <element signature="e#5213#5269#0" expanded="false" />
+            <element signature="e#5289#5372#0" expanded="false" />
+            <element signature="n#!!block;n#randomEvent#0" expanded="false" />
             <element signature="n#!!block;n#updateUI#0" expanded="false" />
             <element signature="n#!!block;n#gameUpdate#0" expanded="false" />
             <element signature="n#!!block;n#newGame#0" expanded="false" />
-            <element signature="e#4779#4838#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -760,35 +805,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/shop.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1989">
-          <caret line="117" column="1" lean-forward="false" selection-start-line="117" selection-start-column="1" selection-end-line="117" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="181" column="36" lean-forward="false" selection-start-line="181" selection-start-column="36" selection-end-line="181" selection-end-column="36" />
-          <folding>
-            <element signature="e#549#646#0" expanded="false" />
-            <element signature="e#673#677#0" expanded="false" />
-            <element signature="e#785#1023#0" expanded="false" />
-            <element signature="n#!!block;n#getRandomNumber#0" expanded="false" />
-            <element signature="n#!!block;n#generateName#0" expanded="false" />
-            <element signature="n#!!block;n#Stock#0" expanded="false" />
-            <element signature="n#!!block;n#updateUI#0" expanded="false" />
-            <element signature="n#!!block;n#gameUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#newGame#0" expanded="false" />
-            <element signature="e#4779#4838#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        <state relative-caret-position="740">
+          <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -796,9 +814,35 @@
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
-          <caret line="50" column="16" lean-forward="true" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
+          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="97" column="1" lean-forward="true" selection-start-line="97" selection-start-column="1" selection-end-line="97" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="109" column="24" lean-forward="true" selection-start-line="109" selection-start-column="24" selection-end-line="109" selection-end-column="24" />
           <folding>
-            <element signature="n#template#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#907#961#0" expanded="false" />
+            <element signature="e#1219#1302#0" expanded="false" />
+            <element signature="e#1413#1641#0" expanded="false" />
+            <element signature="n#!!block;n#getRandomNumber#0" expanded="false" />
+            <element signature="n#!!block;n#generateName#0" expanded="false" />
+            <element signature="e#5213#5269#0" expanded="false" />
+            <element signature="e#5289#5372#0" expanded="false" />
+            <element signature="n#!!block;n#randomEvent#0" expanded="false" />
+            <element signature="n#!!block;n#updateUI#0" expanded="false" />
+            <element signature="n#!!block;n#gameUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#newGame#0" expanded="false" />
           </folding>
         </state>
       </provider>

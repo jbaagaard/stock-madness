@@ -2,3 +2,164 @@
     opacity:0;
     transition: opacity 200ms;
 }
+
+*{
+    padding:0;
+    margin:0;
+}
+
+input, button{
+    border:none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    letter-spacing: -1px;
+    font-size: 26px;
+
+}
+
+body{
+    background-color: #0d0e12;
+
+}
+
+.container{
+    color: #8d8c8d;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    letter-spacing: -1px;
+    font-size: 26px;
+}
+
+#toast-container>div{
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.toast .toast-info{
+    -webkit-box-shadow: 0px 5px 25px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 5px 25px -6px rgba(0,0,0,0.75);
+    box-shadow: 0px 5px 25px -6px rgba(0,0,0,0.75);
+}
+
+header{
+    background-color: #3d4248;
+    padding: 0;
+    height: 100px;
+    width: 100%;
+    font-size: 36px;
+    color: #f8f8f8;
+    line-height: 100px;
+}
+
+html,body,.container{
+    width: 100%;
+}
+.buy-button,.sell-button{
+    height: 100%;
+    width: 120px;
+    background-color: #1485d0;
+    float: left;
+    color: #fff;
+    font-weight: 100;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    border-left:  1px solid #0b77ae;
+    cursor: pointer;
+}
+
+.buy-button:hover,.sell-button:hover{
+    background-color: #1472bb;
+
+}
+
+.stock{
+    background-color: #121317;
+    margin-bottom: 30px;
+    height: 50px;
+    transition: background-color 50ms ease;
+    cursor: pointer;
+}
+
+.stock.selected{
+    background-color: #17181d;
+    transition: background-color 50ms ease;
+}
+
+.stock:hover{
+    background-color: #17181d;
+    transition: background-color 50ms ease;
+}
+
+.stock:active{
+    background-color: #15161a;
+    transition: background-color 50ms ease;
+}
+
+/*li:nth-child(even){*/
+    /*background-color: #121317;*/
+/*}*/
+
+.amount-inputfield{
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    background-color: #090a0f;
+    color: #8d8c8d;
+    float: left;
+
+}
+
+.max-button{
+    height: 100%;
+    width: 50px;
+    background-color: #03997e;
+    float: left;
+    color: #fff;
+    font-weight: 100;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.stock-name, .stock-price,.stock-owned{
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    border-right:1px solid #1B1B1B ;
+    line-height: 50px;
+}
+
+.stock-list{
+    margin-top: 60px;
+}
+
+
+
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    float: left;
+    border-bottom: 15px solid #32ee6a;
+    margin-top: 18px;
+}
+
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    float: left;
+    border-top: 15px solid #ee3b32;
+    margin-top: 18px;
+}
+
+
+#stock-chart{
+    height: 200px;
+    width:500px;
+}
